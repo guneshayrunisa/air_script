@@ -1,16 +1,49 @@
-# air_script
+# AirScript
 
-A new Flutter project.
+AirScript, Flutter kullanılarak geliştirilmiş hareket tabanlı akıllı çizim ve harf tanıma uygulamasıdır. Proje kapsamında kullanıcılar cihaz hareketlerini kullanarak havada çizim yapabilmekte, oluşturdukları çizimleri kaydedebilmekte ve yapay zeka destekli tahmin sistemi ile çizilen şekillerin hangi harfe benzediğini analiz edebilmektedir.
 
-## Getting Started
+Uygulama içerisinde kullanıcı doğrulama işlemleri klasik şifre yapısı yerine imza tabanlı kimlik doğrulama sistemi ile gerçekleştirilmiştir. Kullanıcılar kayıt olurken kendi imzalarını oluşturarak sisteme kaydolmakta, giriş yaparken ise yeniden çizdikleri imza ile doğrulanmaktadır. Böylece biyometrik doğrulamaya benzer alternatif bir giriş sistemi geliştirilmiştir.
 
-This project is a starting point for a Flutter application.
+Projede çizim verileri SQLite veritabanında kullanıcı bazlı olarak saklanmakta, Firebase altyapısı ile bulut tabanlı veri yönetimi desteklenmektedir. Harf tanıma sistemi kullanıcı geri bildirimleri ile öğrenebilen bir yapıya sahiptir. Sistem başlangıçta temel şekil analizleri ile tahmin üretirken, kullanıcı düzeltmeleri sayesinde zamanla daha doğru sonuçlar vermeye başlamaktadır.
 
-A few resources to get you started if this is your first Flutter project:
+Uygulama modern Flutter arayüz bileşenleri kullanılarak geliştirilmiş olup katmanlı yazılım mimarisi yaklaşımı benimsenmiştir. Ayrıca proje kapsamında yazılım sınama ve doğrulama süreçleri için unit testler gerçekleştirilmiş ve sistemin temel işlevleri test edilmiştir.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Özellikler
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Hareket tabanlı çizim sistemi
+- Yapay zeka destekli harf tahmini
+- İmza tabanlı kullanıcı doğrulama sistemi
+- Çok kullanıcılı yapı
+- SQLite tabanlı yerel veritabanı
+- Firebase entegrasyonu
+- Öğrenebilen harf tanıma sistemi
+- Çizim kaydetme ve görüntüleme
+- Unit test desteği
+
+## Kullanılan Teknolojiler
+
+- Flutter
+- Dart
+- SQLite
+- Firebase Firestore
+- SharedPreferences
+
+## Yazılım Mimarisi
+
+Projede katmanlı yazılım mimarisi kullanılmıştır.
+
+- Presentation Layer (UI)
+- Service Layer (İş mantığı)
+- Data Layer (Veri yönetimi)
+
+## Testler
+
+Projede aşağıdaki sistemler için unit testler gerçekleştirilmiştir:
+
+- Harf tanıma sistemi
+- İmza doğrulama sistemi
+- Çizim modeli veri dönüşümleri
+
+## Geliştirici
+
+Hayrünisa Güneş
